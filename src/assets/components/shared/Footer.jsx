@@ -10,7 +10,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/ald4ir21/" target='_blank'><i class='bx bxl-instagram'></i></a>
           </div>
           <div>
-            <a href=""><i class='bx bxl-github'></i></a>
+            <a href="https://github.com/AldairAlburqueque/entregable6.git"><i class='bx bxl-github'></i></a>
           </div>
           <div>
             <a href="https://www.linkedin.com/in/aldair-alburqueque-20046725b/" target='_blank'><i class='bx bxl-linkedin-square'></i></a>
