@@ -1,0 +1,22 @@
+.cart{
+    display: flex;
+    padding: 20px 0;
+    gap: .5em;
+    justify-content: space-around;
+    align-items: center;
+}
+.cart_header{
+    padding-left: 10px;
+}
+.cart_img{
+    height: 90px;
+    object-fit: contain;
+    width: 80px;
+}
+.cart_title{
+    font-size: 13px;
+    color: #515151;
+}
+.cart_list{
+    font-size: 13px;
+}

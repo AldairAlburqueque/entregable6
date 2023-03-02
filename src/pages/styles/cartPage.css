@@ -1,0 +1,34 @@
+.card_cart{
+    width: 300px;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    height: 100vh;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cart_body{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.cart_footer{
+    width: 80%;
+    border-top: 1px solid #dcd9d9;
+    padding: 60px 10px 100px;
+    margin-bottom: 0;
+    align-self: center;
+}
+.footer_total{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.footer_btn{
+    width: 100%;
+    background-color: #f85151;
+    height: 40px;
+}

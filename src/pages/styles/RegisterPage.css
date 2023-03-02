@@ -1,0 +1,34 @@
+
+.register_card-form{
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  gap: 1.7em;
+  padding: 15px ;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.register_div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+.register_label{
+  color: #888;
+  
+}
+.register_input{
+  align-self: center;
+  width: 100%;
+  height: 30px;
+}
+.register_btn{
+  align-self: center;
+  background-color: crimson;
+  color: #fff;
+  height: 30px;
+  width: 100%;
+}

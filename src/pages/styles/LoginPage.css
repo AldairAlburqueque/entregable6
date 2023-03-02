@@ -1,0 +1,68 @@
+.card_logout{
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logout_article{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bx-user-circle{
+    font-size: 200px;
+}
+.logout_name{
+    color: #4f4f4f;
+}
+.logout_btn{
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #f85555;
+}
+.card_login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: hsla(0,1%,72%,.1);
+}
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 400px; 
+    width: 100%;
+    padding: 20px;
+    gap: 1.5rem;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+}
+.login_title{
+    align-items: center;
+}
+.login_list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+}
+.login_iten{
+    color: #4f4f4f;
+}
+.login_inp{
+    border: 1px solid #dcd9d9;
+    height: 30px;
+}
+.login_btn{
+    background-color: #f85555;
+    color: #fff;
+    height: 30px;
+}

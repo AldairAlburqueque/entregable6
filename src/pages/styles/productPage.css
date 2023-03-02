@@ -1,0 +1,14 @@
+.product_page-header{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:800px) {
+    .product_page-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 60px;
+        gap: 5em;
+}
+}

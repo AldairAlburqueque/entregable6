@@ -1,0 +1,11 @@
+
+.similar_title{
+    color: #f85555;
+    padding: 25px;
+}
+.similar_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
