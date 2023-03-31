@@ -2,7 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './style/header.css'
 
+
 const Header = () => {
+
   return (
     <header className='navbar'>
       <h1>
@@ -16,8 +18,8 @@ const Header = () => {
           <li className='header_li'>
             <Link to='/purchases'><i className='bx bx-box'></i></Link>
           </li>
-          <li className='header_li'>
-            <Link to='/cart'><i className='bx bx-cart'></i></Link>
+          <li className='header_li' >
+            <Link to='/cart'><i className='bx bx-cart' ></i></Link>
           </li>
         </ul>
       </nav>

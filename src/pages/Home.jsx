@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import CardProducts from '../assets/components/Home/CardProducts';
 import { getAllProductsThunk, getProductsByName } from '../store/slices/products.slice';
@@ -52,6 +52,22 @@ const Home = () => {
 
     const filterProduct = product => +product.price >= fromTo.from && +product.price <= fromTo.to
 
+    const [menu, setMenu] = useState(true)
+    const [active, setActive] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+    const [heightEl, setHeightEl] = useState()
+    const refHeight = useRef()
+    
+    useEffect(() => {
+      setHeightEl(`${refHeight.current.scrollHeight}px`)
+
+    }, [active, isOpen])
+    
+
+    const toggle = () =>{ 
+        setActive(!active)
+    }
+    
   return (
     <div className='content'>
       <div className='search'>
@@ -60,14 +76,24 @@ const Home = () => {
           <button >
             <i  className='bx bx-search-alt-2'></i>
         </button>
-      </form>
-      <div className='header'>
+        </form>
+        <div className="filter_button">
+        <i className={menu ?'bx bx-filter-alt': 'bx bx-x'} 
+          onClick={() => setMenu(!menu)}></i>
+        </div>
+      <div className={menu ? 'header' :'header filter'} >
         <article className='category_price'>
         <header className='category_header'>
           <h3>Price</h3>
-          <i className='bx bx-chevron-down option'></i>
+          <i className='bx bx-chevron-down' onClick={() => setIsOpen(!isOpen)}></i>
         </header>
-        <form className='form_price' onSubmit={handleSubmitPrice}>
+        
+          <form 
+            onSubmit={handleSubmitPrice}
+            className={isOpen ?'form_price':'form_price open'}
+            style={{height: isOpen ? `${heightEl}` : '0px'}}
+            ref={refHeight}
+          >
           <div className='price_list'>
             <label htmlFor="from">From</label>
             <input className='list-btn' type="number" id='from' />
@@ -78,19 +104,26 @@ const Home = () => {
           </div>
           <button className='filter_price-btn'>Filter Price</button>
         </form>
+        
       </article>
       <article className='category_search'>
         <header className='category_header'>
           <h3>Category</h3>
-          <i className='bx bx-chevron-down option'></i>
+          <i className='bx bx-chevron-down option' onClick={toggle}></i>
         </header>
-        <ul className='submenu'>
+        <ul
+          className={active ?'submenu':'submenu show'}
+          style={{height: active ? `${heightEl}` : '0px'}}
+          ref={refHeight}
+        >
           <li onClick={()=>dispatch(getAllProductsThunk())} className='category_list'>All products</li>
           {
-            category?.map(category=>(
-              <li className='category_list' key={category.id} onClick={()=>handleClickCategory(category.id)}>{category.name}</li>
+            category?.map(category =>(
+              
+              <li className='category_list' key={category.id} onClick={()=>handleClickCategory(category.id)}>{category.name} </li>
             ))
           }
+          
         </ul>
       </article>
       </div>

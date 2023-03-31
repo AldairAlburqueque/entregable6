@@ -9,6 +9,11 @@
     flex-direction: column;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* transform: translateX(100%); */
+    transition: 0.3s ease;
+}
+.card_card .open{
+    transform:translateX(0) ;
 }
 .cart_body{
     display: flex;

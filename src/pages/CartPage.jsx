@@ -6,6 +6,7 @@ import { getCartThunk } from '../store/slices/cart.slice'
 import config from '../utils/getConfig'
 import './styles/cartPage.css'
 
+
 const CartPage = () => {
 
   const {cart} = useSelector(state=>state)

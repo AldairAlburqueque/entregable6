@@ -12,7 +12,7 @@ import { getAllProductsThunk } from './store/slices/products.slice';
 import ProtectedRoutes from './pages/ProtectedRoutes';
 import CartPage from './pages/CartPage';
 import PurchasesPage from './pages/PurchasesPage';
-import Footer from './assets/components/shared/Footer';
+
 
 function App() {
 
@@ -40,7 +40,7 @@ function App() {
           <Route path='/purchases' element={<PurchasesPage/>}/>
         </Route>
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }

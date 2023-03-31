@@ -6,11 +6,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .search_form{
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    z-index: 1000;
 }
 .search_input{
     width: 70%;
@@ -23,17 +25,48 @@
 }
 .header{
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 300px;
+    position: fixed;
+    min-height: 100vh;
+    transition: 0.3s ease-in-out;
+    transform: translateX(100%);
+    padding-top: 130px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    z-index: 100;
+    bottom: 0;
+}
+.header.filter{
+    transform: translateX(0);
+    
 }
 .category_price{
     margin:30px 0 0 40px;
+}
+.filter_button{
+    margin: 40px;
+    align-self: flex-end;
+}
+.bx-x{
+    position: fixed;
+    right: 15px;
+    top: 80px;
+    z-index: 200;
 }
 .form_price{
     display: flex;
     flex-direction: column;
     gap: .6em;
+    height: --webkit-fill-available;
+    transition: 500ms ease-in-out;
+    overflow: hidden;
 }
-
+.form_price .open{
+    opacity: 0;
+}
 .list-btn{
     display: flex;
     flex-direction: column;
@@ -43,28 +76,39 @@
 .filter_price-btn{
     padding: 10px 25px;
     background-color: #f85151;
+    width: 180px;
+    cursor: pointer;
 }
 .category_search{
-    margin: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin-right: 50px;
+    margin:30px 0 0 40px;
 }
 .category_header{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 1em;
     margin-bottom: 10px;
+}
+.submenu{
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    transition:  500ms ease-in-out;
+    cursor: pointer;
+}
+.submenu .show{
+    height: 200px;
+    opacity: 1;
 }
 .category_list{
     color: #515151;
     padding: 5px;
 }
-
-.active{
-    display: block;
+.bx{
+    cursor: pointer;
 }
+
 @media (min-width:1000px) {
     .content{
         display: grid;
@@ -72,6 +116,7 @@
     }
     .search{
         width: 380px;
+        margin-top: 50px;
     }
     .header{
         position: fixed;
@@ -83,10 +128,21 @@
         padding-top: 130px;
         width: 380px;
         justify-content: start;
+    
+        transform: none;
     }
     .search_form{
         top: 80px;
         position: fixed;
         padding-left: 30px;
+    }
+    .category_search{
+        width: 175px;
+    }
+    .category_header{
+        justify-content: space-between;
+    }
+    .filter_button{
+        display: none;
     }
 }
